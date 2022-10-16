@@ -17,22 +17,19 @@ export const Header: React.FC = () => {
           </div>
           <nav className={styles.header__nav}>
             <div className={styles.header__item}>
-              sup
+              Recipes
             </div>
             <div className={styles.header__item}>
-              sup
+              Quick & Easy
             </div>
             <div className={styles.header__item}>
-              sup
+              Table Talk
             </div>
             <div className={styles.header__item}>
-              sup
+              Holidays & Seasons
             </div>
             <div className={styles.header__item}>
-              sup
-            </div>
-            <div className={styles.header__item}>
-              sup
+              About Me
             </div>
           </nav>
         </div>

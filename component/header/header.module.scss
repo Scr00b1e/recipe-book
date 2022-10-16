@@ -44,5 +44,9 @@
     }
     &__item {
         margin: 0 20px;
+
+        font-size: 14px;
+        text-transform: capitalize;
+        cursor: pointer;
     }
 }
