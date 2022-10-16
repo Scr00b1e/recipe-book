@@ -1,10 +1,13 @@
 .header {
+    background: #fff;
     border-bottom: 1px #fc9e5f solid;
     color: #000;
 
     padding: 15px 0;
     width: 100%;
     position: fixed;
+
+    z-index: 100;
 
     &__inner {
         display: flex;
