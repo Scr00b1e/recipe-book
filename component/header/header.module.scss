@@ -1,4 +1,48 @@
 .header {
-    background: #000;
-    color: #fff;
+    border-bottom: 1px #fc9e5f solid;
+    color: #000;
+
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 100%;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+    &__right {
+        img {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+
+            margin:  0 5px;
+        }
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+    }
+    &__img {
+        width: 50px;
+        height: 50px;
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__item {
+        margin: 0 20px;
+    }
 }
