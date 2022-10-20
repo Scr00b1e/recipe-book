@@ -2,7 +2,7 @@
     padding-top: 90px;
 
     width: 100%;
-    height: 750px;
+    height: 950px;
 
     position: relative;
 
@@ -31,8 +31,8 @@
 
     &__words {
         position: absolute;
-        top: 50%;
-        left: 35%;
+        top: 45%;
+        left: 40%;
 
         text-align: center;
         background: #fff;
@@ -41,5 +41,8 @@
     }
     &__title {
         font-size: 26px;
+    }
+    &__text {
+        margin-bottom: 30px;
     }
 }
