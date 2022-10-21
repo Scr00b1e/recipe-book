@@ -1,0 +1,39 @@
+.item {
+    display: flex;
+    align-items: flex-start;
+    //justify-content: center;
+    flex-direction: column;
+
+    margin: 10px;
+    width: 400px;
+
+    &__heading {
+        text-align: center;
+        font-size: 30px;
+        margin: 20px 0;
+    }
+
+    &__img {
+        object-fit: fill;
+    }
+    &__type {
+        margin: 15px 0;
+
+        font-size: 20px;
+        font-weight: 700;
+        color: #f73939;
+        text-transform: uppercase;
+    }
+    &__title {
+        font-size: 26px;
+        font-weight: 700;
+        text-align: start;
+    }
+    &__bottom {
+        margin-top: 10px;
+        display: flex;
+    }
+    &__text {
+        font-size: 24px;
+    }
+}
