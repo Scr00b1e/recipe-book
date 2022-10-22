@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { fastNquick } from './data/fastNquick';
+import { breakfast } from './data/breakfast';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json(fastNquick)
+  res.status(200).json(breakfast)
 }
