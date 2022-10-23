@@ -1,14 +1,20 @@
 import React from 'react'
 import styles from './item.module.scss'
 
-type RecipesProps = {
-  recipes: {
-    img: string
-    title: string
-  }
-}
+// type RecipesProps = {
+//   recipes: {
+//     id: string
+//     img: string
+//     title: string
+//   }
+// }
 
-export const Item: React.FC<RecipesProps> = ({recipes}) => {
+export const Item: React.FC = () => {
+
+  // if(!recipes) {
+  //   return null
+  // }
+
   return (
     <div className={styles.item}>
         <img src="https://www.simplyrecipes.com/thmb/HBtBhymlFjjKoO8JGqs5bu5NaQU=/390x260/filters:max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Meatball-Parm-Sliders-LEAD-5-837a559ccfab4a8ba861db245375a5f8.jpg" alt="" className={styles.item__img}/>
