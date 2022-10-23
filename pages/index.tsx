@@ -1,35 +1,40 @@
 import Intro from "../component/intro/Intro"
-import {Item} from "../component/item"
+import {Item, RecipesProps} from "../component/item"
 import { Header } from "../component/header"
 
-// export const getStaticProps = async (context) => {
-//   try {
-//     // const responce = await fetch(`${process.env.API_HOST}/recipes`)
-//     const responce = await fetch('http://localhost:3000/api/recipes')
-//     const data = await responce.json()
+export const getStaticProps = async () => {
+  try {
+    // const responce = await fetch(`${process.env.API_HOST}/recipes`)
+    const responce = await fetch('http://localhost:3000/api/recipes')
+    const recipes = await responce.json()
 
-//     if(!data) {
-//       return {
-//         notFound: true
-//       }
-//     }
+    if(!recipes) {
+      return {
+        notFound: true
+      }
+    }
 
-//     return {
-//       props: {recipes: data}
-//     }
-//   } catch {
-//     alert('something is wrong')
-//   }
-// }
+    return {
+      props: {recipes}
+    }
+  } catch {
+    alert('something is wrong')
+  }
+}
 
-  const Home = () => (
+  const Home = ({recipes}) => (
     <>
       <Header/>
       <Intro/>
       <div className="container">
         <h1 className="heading__title">Go there!</h1>
         <section className="heading">
-          <Item/> 
+          {
+           recipes && 
+           recipes.map((obj: RecipesProps) => (
+            <Item {...obj} key={obj.id}/> 
+          ))
+          }
         </section>
       </div>
     </>
