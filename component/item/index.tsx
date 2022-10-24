@@ -9,6 +9,7 @@ export type RecipesProps = {
 }
 
 export const Item: React.FC<RecipesProps> = ({ img, title, time }) => {
+  
   return (
     <div className={styles.item}>
         <img src={img} alt="" className={styles.item__img}/>
