@@ -8,6 +8,19 @@ body {
     font-size: 24px;
     position: relative;
 }
+ul {
+    list-style: none;
+}
+a {
+    color: #000;
+    text-decoration: none;
+
+    transition: all .3s linear;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
 
 //for components
 .container {

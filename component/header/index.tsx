@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import styles from './header.module.scss'
 
@@ -16,9 +17,36 @@ export const Header: React.FC = () => {
               </h1>
           </div>
           <nav className={styles.header__nav}>
-            <div className={styles.header__item}>
-              Recipes
-            </div>
+              <div className={styles.header__item}>
+                Recipes
+                <ul className={styles.header__list}>
+                  <li className={styles.header__link}>
+                    <Link href={'/breakfast'}>
+                      Breakfast
+                    </Link>
+                  </li>
+                  <li className={styles.header__link}>
+                  <Link href={'/breakfast'}>
+                      Breakfast
+                    </Link>
+                  </li>
+                  <li className={styles.header__link}>
+                  <Link href={'/breakfast'}>
+                      Breakfast
+                    </Link>
+                  </li>
+                  <li className={styles.header__link}>
+                  <Link href={'/breakfast'}>
+                      Breakfast
+                    </Link>
+                  </li>
+                  <li className={styles.header__link}>
+                  <Link href={'/breakfast'}>
+                      Breakfast
+                    </Link>
+                  </li>
+                </ul>
+              </div>
             <div className={styles.header__item}>
               Quick & Easy
             </div>

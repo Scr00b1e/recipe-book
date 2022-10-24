@@ -15,7 +15,7 @@
         justify-content: space-between;
 
         width: 100%;
-        max-width: 1170px;
+        max-width: 1400px;
         margin: 0 auto;
     }
     &__left {
@@ -46,10 +46,37 @@
         justify-content: space-between;
     }
     &__item {
+        position: relative;
         margin: 0 20px;
 
-        font-size: 14px;
+        font-size: 24px;
         text-transform: capitalize;
         cursor: pointer;
+
+        &:hover {
+            .header__list {
+                display: block;
+            }
+        }
+    }
+    &__list {
+        display: none;
+        position: absolute;
+        bottom: -270px;
+        right: -140px;
+        z-index: 100;
+
+        min-height: 200px;
+        width: 200px;
+
+        background: #fff;
+        border: #fc9e5f 1px solid;
+    }
+    &__link {
+        padding: 10px;
+
+        &:hover {
+            background: #fc9e5f;
+        }
     }
 }
