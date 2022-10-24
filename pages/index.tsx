@@ -1,6 +1,7 @@
 import Intro from "../component/intro/Intro"
 import {Item, RecipesProps} from "../component/item"
 import { Header } from "../component/header"
+import Link from "next/link"
 
 export const getStaticProps = async () => {
   try {
@@ -27,7 +28,9 @@ export const getStaticProps = async () => {
       <Header/>
       <Intro/>
       <div className="container">
-        <h1 className="heading__title">Go there!</h1>
+        <Link href={'/breakfast'}>
+          <h1 className="heading__title">Go there!</h1>
+        </Link>
         <section className="heading">
           {
            recipes && 

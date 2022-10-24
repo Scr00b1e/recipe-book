@@ -1,11 +1,16 @@
 import React from 'react'
+import styles from './breakfast.module.scss'
 
 const Breakfast = () => {
-  return (
-    <div>
-        Breakfast
-    </div>
-  )
+    // breafast === br
+
+    return (
+        <div className={styles.br}>
+            <div className="container">
+                Breakfast
+            </div>
+        </div>
+      )
 }
 
 export default Breakfast

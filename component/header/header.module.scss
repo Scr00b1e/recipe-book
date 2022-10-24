@@ -35,6 +35,8 @@
     &__name {
         display: flex;
         align-items: center;
+
+        cursor: pointer;
     }
     &__img {
         width: 50px;

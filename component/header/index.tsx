@@ -7,15 +7,17 @@ export const Header: React.FC = () => {
     <div className={styles.header}>
       <div className={styles.header__inner}>
         <div className={styles.header__left}>
-          <div className={styles.header__name}>
-            <img 
-              src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png" 
-              alt=""
-              className={styles.header__img} />
-              <h1 className={styles.header__title}>
-                Recipes
-              </h1>
-          </div>
+          <Link href={'/'}>
+            <div className={styles.header__name}>
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png" 
+                alt=""
+                className={styles.header__img} />
+                <h1 className={styles.header__title}>
+                  Recipes
+                </h1>
+            </div>
+          </Link>
           <nav className={styles.header__nav}>
               <div className={styles.header__item}>
                 Recipes
