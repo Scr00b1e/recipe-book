@@ -38,7 +38,7 @@ const BreakfastItem = ({item}) => {
   return (
     <div className={styles.br}>
       <div className='container'>
-        slkdflaks
+        {item.title}
       </div>
     </div>
   )
