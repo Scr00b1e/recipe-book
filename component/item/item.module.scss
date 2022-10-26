@@ -23,6 +23,8 @@
 
     &__img {
         object-fit: fill;
+        width: 100%;
+        
     }
     &__type {
         margin: 15px 0;
@@ -36,6 +38,7 @@
         font-size: 26px;
         font-weight: 700;
         text-align: start;
+        text-transform: capitalize;
     }
     &__bottom {
         margin-top: 10px;

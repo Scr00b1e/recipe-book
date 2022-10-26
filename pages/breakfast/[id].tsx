@@ -1,27 +1,46 @@
 import React from 'react'
-import { Item } from '../../component/item'
+import styles from './breakfast.module.scss'
 
-type BreakfastData = {
+export async function getServerSideProps(context) {
+  try {
+      const { id } = context.params
+      const responce = await fetch(`${process.env.API_HOST}/brPage/${id}`)
+      const data = await responce.json()
+
+      if(!data) {
+          return {
+              notFound: true,
+          }
+      }
+
+      return {
+          props: {item: data}
+      }
+  } catch {
+      return {
+          props: {item: null}
+      }
+  }
+}
+
+type ItemProps = {
+  title: string
+  time: number
   id: string
   img: string
-  title: string
-  type: string
-  time: number
 }
 
-interface BreakfastType {
-  data: BreakfastData[]
-}
-
-const BreakfastItem: React.FC<BreakfastType> = ({data}) => {
+const BreakfastItem = ({item}) => {
+  // const things = item.map((obj) => (
+  //   {...obj}
+  // ))
+  
   return (
-    <>
-      {
-        data.map((obj) => {
-          <Item {...obj} key={obj.id}/>
-        })
-      }
-    </>
+    <div className={styles.br}>
+      <div className='container'>
+        slkdflaks
+      </div>
+    </div>
   )
 }
 

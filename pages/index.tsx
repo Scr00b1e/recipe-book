@@ -5,8 +5,7 @@ import Link from "next/link"
 
 export const getStaticProps = async () => {
   try {
-    // const responce = await fetch(`${process.env.API_HOST}/recipes`)
-    const responce = await fetch('http://localhost:3000/api/recipes')
+    const responce = await fetch(`${process.env.API_HOST}/recipes`)
     const recipes = await responce.json()
 
     if(!recipes) {

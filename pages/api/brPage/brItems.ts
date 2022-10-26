@@ -10,10 +10,10 @@ export const brItems = [
     },
     {
         "id": "1",
-        "img": "https://www.simplyrecipes.com/thmb/nOulq8-ekp-YOPPSRH0YzhVEja0=/300x225/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Pumpkin-Scones-with-Maple-LEAD-01-44715381b8cc4bbaaebf8a88ca46d8b9.jpg",
-        "type": "desserts",
-        "title": "Pumpkin scones with maple glaze",
-        "time": 37
+        "img": "https://www.simplyrecipes.com/thmb/4woou16nhCV7PLTEP_9GwKppkAk=/300x225/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Plantain-Frittata-LEAD-06-583a3d0b039a4b1399e5564268c257d7.jpg",
+        "type": "for two",
+        "title": "plantain fritata",
+        "time": 30
     },
     {
         "id": "2",
@@ -52,7 +52,7 @@ export const brItems = [
     },
     {
         "id": "7",
-        "img": "https://www.simplyrecipes.com/thmb/9qvotZVjan4wmDj-8BQ7K_g3UHA=/300x225/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-Lemon-Scones-LEAD-4-0ecd375329f245e9873f551ebc94f71d.jpg",
+        "img": "https://www.simplyrecipes.com/thmb/WjuHughAoIXfqV2iuBvKMpjTass=/300x225/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Simply-Recipes-French-Omlette-LEAD-03-ed7ea5df6f7c45a3b8ec0ae1d997f1e8.jpg",
         "type": "breakfast",
         "title": "french omelette",
         "time": 8

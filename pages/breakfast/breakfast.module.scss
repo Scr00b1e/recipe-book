@@ -1,4 +1,16 @@
 // breakfast === br
 .br {
     padding-top: 100px;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        text-align: center;
+        margin: 20px;
+    }
 }
