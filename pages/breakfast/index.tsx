@@ -3,44 +3,37 @@ import { Item } from '../../component/item'
 import styles from './breakfast.module.scss'
 import BreakfastItem from './[id]'
 
-type BreakfastData = {
-    id: string
-    img: string
-    title: string
-    type: string
-    time: number
-  }
-
-export const getStaticProps = async () => {
+export async function getStaticProps() {
     try {
-        const responce = await fetch('http://localhost/api/brPage')
+        const responce = await fetch('http://localhost:3000/api/brPage')
         const data = await responce.json()
 
         if(!data) {
             return {
-                notFound: true
+                notFound: true,
             }
         }
 
         return {
-            props: {data}
+            props: {item: data}
         }
     } catch {
         return {
-            props: {data: null}
+            props: {item: null}
         }
     }
 }
 
-const Breakfast = ({ data }) => {
+const Breakfast = ({ item }) => {
+    
     // breafast === br
 
     return (
         <div className={styles.br}>
             <div className="container">
                 {
-                    data &&
-                    data.map((obj: BreakfastData) => (
+                    item &&
+                    item.map((obj) => (
                         <Item {...obj} key={obj.id}/>
                     ))
                 }
