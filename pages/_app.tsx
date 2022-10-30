@@ -1,4 +1,5 @@
 import { AppProps } from 'next/app';
+import { Footer } from '../component/footer';
 import { Header } from '../component/header';
 import './global.scss'
 
@@ -7,6 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Header/>
       <Component {...pageProps} />
+      <Footer/>
     </>
   )
 }
