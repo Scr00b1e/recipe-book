@@ -1,7 +1,21 @@
 import React from 'react'
 import styles from './breakfast.module.scss'
 
-export async function getServerSideProps(context) {
+export const getStaticPaths = async () => {
+  const res = await fetch(`${process.env.API_HOST}/brPage`)
+  const data = await res.json()
+
+  const paths = data.map(({ id }) => ({
+    params: { id: id.toString() }
+  }))
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps(context) {
   try {
       const { id } = context.params
       const responce = await fetch(`${process.env.API_HOST}/brPage/${id}`)
@@ -24,13 +38,15 @@ export async function getServerSideProps(context) {
 }
 
 type ItemProps = {
-  title: string
-  time: number
-  id: string
-  img: string
+  item: {
+    title: string
+    time: number
+    id: string
+    img: string
+  }
 }
 
-const BreakfastItem = ({item}) => {
+const BreakfastItem: React.FC<ItemProps> = ({item}) => {
   // const things = item.map((obj) => (
   //   {...obj}
   // ))
