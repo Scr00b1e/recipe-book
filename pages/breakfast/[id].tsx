@@ -54,7 +54,7 @@ const BreakfastItem: React.FC<ItemProps> = ({item}) => {
   return (
     <div className={styles.br}>
       <div className='container'>
-        {item.title}
+        shit
       </div>
     </div>
   )
