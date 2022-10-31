@@ -15,6 +15,7 @@ export const Item: React.FC<RecipesProps> = ({ id, img, title, time, type }) => 
     <Link href={`/breakfast/${id}`}>
       <div className={styles.item}>
         <img src={img} alt="" className={styles.item__img}/>
+        <img src="../favorite.svg" alt="" className={styles.item__heart}/>
         <span className={styles.item__type}>{type}</span>
         <h1 className={styles.item__title}>{title}</h1>
         <div className={styles.item__bottom}>

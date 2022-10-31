@@ -22,9 +22,16 @@
     }
 
     &__img {
+        position: relative;
         object-fit: fill;
-        width: 100%;
-        
+        width: 100%;   
+        transition: all .3s linear;
+    }
+    &__heart {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 100;
     }
     &__type {
         margin: 15px 0;
