@@ -1,9 +1,9 @@
-import Link from 'next/link'
+import { GetStaticProps } from 'next'
 import React from 'react'
 import { Item, RecipesProps } from '../../component/item'
 import styles from './breakfast.module.scss'
 
-export async function getStaticProps() {
+export const  getStaticProps: GetStaticProps = async () => {
     try {
         const responce = await fetch(`${process.env.API_HOST}/brPage`)
         const data = await responce.json()

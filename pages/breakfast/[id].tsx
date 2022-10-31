@@ -1,21 +1,16 @@
+import { GetServerSideProps } from 'next'
 import React from 'react'
 import BrItem from '../../component/brItem/BrItem'
 import styles from './breakfast.module.scss'
 
-export const getServerSideProps = async (context) => {
-  const { id } = context.params
-  const res = await fetch(`${process.env.API_HOST}/brPage/${id}`)
-  const item = await res.json()
+export const getServerSideProps: GetServerSideProps = async ({params}) => {
+  
+    const res = await fetch(`${process.env.API_HOST}/brPage/${params.id}.json`)
+    const item = await res.json()
 
-  // if(!data) {
-  //   return {
-  //     notFound: true
-  //   }
-  // }
-
-  return {
-    props: {item}
-  }
+    return {
+      props: {item}
+    }
 }
 
 type ItemProps = {
