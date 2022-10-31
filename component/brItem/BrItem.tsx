@@ -1,15 +1,9 @@
 import React from 'react'
 
-type BrItem = {
-    title: string
-    img: string
-    time: number
-}
-
-const BrItem: React.FC<BrItem> = ({title, img, time}) => {
+const BrItem = ({item}) => {
   return (
     <div>
-        {title}
+      {item.title}
     </div>
   )
 }

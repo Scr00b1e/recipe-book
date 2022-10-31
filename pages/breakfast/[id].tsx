@@ -6,37 +6,22 @@ import styles from './breakfast.module.scss'
 export const getServerSideProps: GetServerSideProps = async ({params}) => {
   
     const res = await fetch(`${process.env.API_HOST}/brPage/${params.id}.json`)
-    const item = await res.json()
+    const data = await res.json()
 
     return {
-      props: {item}
+      props: {item: data}
     }
 }
 
 type ItemProps = {
-  item: {
-    map(arg0: (obj: any) => void): React.ReactNode
-    title: string
-    time: number
-    id: string
-    img: string
-  }
+  item: any
 }
 
 const BreakfastItem: React.FC<ItemProps> = ({item}) => {
-  // const things = item.map((obj) => (
-  //   {...obj}
-  // ))
-  
   return (
     <div className={styles.br}>
       <div className='container'>
-        {
-          item &&
-          item.map((obj) => {
-            <BrItem {...obj} key={obj.id}/>
-          })
-        }
+        <BrItem item={item}/>
       </div>
     </div>
   )
