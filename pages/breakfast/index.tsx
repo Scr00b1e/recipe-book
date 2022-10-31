@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { Item } from '../../component/item'
+import { Item, RecipesProps } from '../../component/item'
 import styles from './breakfast.module.scss'
 
 export async function getStaticProps() {
@@ -35,10 +35,8 @@ const Breakfast = ({ item }) => {
                 <div className={styles.br__content}>
                     {
                         item &&
-                        item.map((obj) => (
-                            <Link href={`/breakfast/${obj.id}`}>
-                                <Item {...obj} key={obj.id}/>
-                            </Link>
+                        item.map((obj: RecipesProps) => (
+                            <Item {...obj} key={obj.id}/>
                         ))
                     }
                 </div>

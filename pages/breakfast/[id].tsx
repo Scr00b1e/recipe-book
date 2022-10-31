@@ -1,44 +1,26 @@
 import React from 'react'
+import BrItem from '../../component/brItem/BrItem'
 import styles from './breakfast.module.scss'
 
-export const getStaticPaths = async () => {
-  const res = await fetch(`${process.env.API_HOST}/brPage`)
-  const data = await res.json()
+export const getServerSideProps = async (context) => {
+  const { id } = context.params
+  const res = await fetch(`${process.env.API_HOST}/brPage/${id}`)
+  const item = await res.json()
 
-  const paths = data.map(({ id }) => ({
-    params: { id: id.toString() }
-  }))
+  // if(!data) {
+  //   return {
+  //     notFound: true
+  //   }
+  // }
 
   return {
-    paths,
-    fallback: false,
-  }
-}
-
-export async function getStaticProps(context) {
-  try {
-      const { id } = context.params
-      const responce = await fetch(`${process.env.API_HOST}/brPage/${id}`)
-      const data = await responce.json()
-
-      if(!data) {
-          return {
-              notFound: true,
-          }
-      }
-
-      return {
-          props: {item: data}
-      }
-  } catch {
-      return {
-          props: {item: null}
-      }
+    props: {item}
   }
 }
 
 type ItemProps = {
   item: {
+    map(arg0: (obj: any) => void): React.ReactNode
     title: string
     time: number
     id: string
@@ -54,7 +36,12 @@ const BreakfastItem: React.FC<ItemProps> = ({item}) => {
   return (
     <div className={styles.br}>
       <div className='container'>
-        shit
+        {
+          item &&
+          item.map((obj) => {
+            <BrItem {...obj} key={obj.id}/>
+          })
+        }
       </div>
     </div>
   )
