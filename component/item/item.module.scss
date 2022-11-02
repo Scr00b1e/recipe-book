@@ -21,13 +21,23 @@
         margin: 20px 0;
     }
 
-    &__img {
+    &__image {
         position: relative;
+        width: 100%;
+
+        &:hover {
+            .item__heart {
+                display: block;
+            }
+        }
+    }
+    &__img {
         object-fit: fill;
         width: 100%;   
         transition: all .3s linear;
     }
     &__heart {
+        display: none;
         position: absolute;
         top: 0;
         right: 0;
