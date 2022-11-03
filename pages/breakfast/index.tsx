@@ -1,7 +1,6 @@
 import { GetStaticProps } from 'next'
 import React from 'react'
-import { Item, RecipesProps } from '../../component/item'
-import styles from './breakfast.module.scss'
+import PagesItem from '../../component/pagesItem/PagesItem'
 
 export const  getStaticProps: GetStaticProps = async () => {
     try {
@@ -25,23 +24,11 @@ export const  getStaticProps: GetStaticProps = async () => {
 }
 
 const Breakfast = ({ item }) => {
-    
-    // breafast === br
-
     return (
-        <div className={styles.br}>
-            <div className="container">
-                <h1 className={styles.br__title}>Breakfast</h1>
-                <div className={styles.br__content}>
-                    {
-                        item &&
-                        item.map((obj: RecipesProps) => (
-                            <Item {...obj} key={obj.id} apiUrl={'/breakfast'}/>
-                        ))
-                    }
-                </div>
-            </div>
-        </div>
+        <PagesItem
+            pageTitle={'Breakfast'}
+            pageUrl={'/brPage'} item={item}
+        />
       )
 }
 

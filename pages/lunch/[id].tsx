@@ -1,11 +1,10 @@
 import { GetServerSideProps } from 'next'
 import React from 'react'
-import BrItem from '../../component/brItem/BrItem'
-import styles from './breakfast.module.scss'
+import styles from '../breakfast/breakfast.module.scss'
 
 export const getServerSideProps: GetServerSideProps = async ({params}) => {
   
-    const res = await fetch(`${process.env.API_HOST}/lunch/${params.id}.json`)
+    const res = await fetch(`${process.env.API_HOST}/lunch/${params.id}`)
     const data = await res.json()
 
     return {
@@ -21,7 +20,9 @@ const LunchItem: React.FC<ItemProps> = ({item}) => {
   return (
     <div className={styles.br}>
       <div className='container'>
-        <BrItem item={item}/>
+       {
+        item
+       }
       </div>
     </div>
   )
