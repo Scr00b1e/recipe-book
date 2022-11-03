@@ -1,7 +1,7 @@
 import { GetServerSideProps } from 'next'
 import React from 'react'
 import BrItem from '../../component/brItem/BrItem'
-import styles from './breakfast.module.scss'
+import styles from '../../component/pagesItem/PagesItem.module.scss'
 
 export const getServerSideProps: GetServerSideProps = async ({params}) => {
   
@@ -19,7 +19,7 @@ type ItemProps = {
 
 const BreakfastItem: React.FC<ItemProps> = ({item}) => {
   return (
-    <div className={styles.br}>
+    <div className={styles.item}>
       <div className='container'>
         <BrItem item={item}/>
       </div>

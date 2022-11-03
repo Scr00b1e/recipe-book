@@ -11,10 +11,10 @@ type PageProps = {
 const Lunch: React.FC<PageProps> = ({ item, pageTitle, pageUrl }) => {
 
     return (
-        <div className={styles.br}>
+        <div className={styles.item}>
             <div className="container">
-                <h1 className={styles.br__title}>{pageTitle}</h1>
-                <div className={styles.br__content}>
+                <h1 className={styles.item__title}>{pageTitle}</h1>
+                <div className={styles.item__content}>
                     {
                         item &&
                         item.map((obj: RecipesProps) => (

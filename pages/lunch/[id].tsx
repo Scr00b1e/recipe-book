@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next'
 import React from 'react'
-import styles from '../breakfast/breakfast.module.scss'
+import styles from '../../component/pagesItem/PagesItem.module.scss'
 
 export const getServerSideProps: GetServerSideProps = async ({params}) => {
   
@@ -18,7 +18,7 @@ type ItemProps = {
 
 const LunchItem: React.FC<ItemProps> = ({item}) => {
   return (
-    <div className={styles.br}>
+    <div className={styles.item}>
       <div className='container'>
        {
         item
