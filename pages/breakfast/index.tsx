@@ -36,7 +36,7 @@ const Breakfast = ({ item }) => {
                     {
                         item &&
                         item.map((obj: RecipesProps) => (
-                            <Item {...obj} key={obj.id}/>
+                            <Item {...obj} key={obj.id} apiUrl={'/breakfast'}/>
                         ))
                     }
                 </div>

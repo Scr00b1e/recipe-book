@@ -8,11 +8,19 @@ export type RecipesProps = {
   title: string
   time: number
   type: string
+  apiUrl: string
 }
 
-export const Item: React.FC<RecipesProps> = ({ id, img, title, time, type }) => {
+export const Item: React.FC<RecipesProps> = ({ 
+  id, 
+  img, 
+  title, 
+  time, 
+  type, 
+  apiUrl }) => {
+    
   return (
-    <Link href={`/breakfast/${id}`}>
+    <Link href={`/${apiUrl}/${id}`}>
       <div className={styles.item}>
         <div className={styles.item__image}>
         <img src={img} alt="" className={styles.item__img}/>

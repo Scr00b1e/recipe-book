@@ -34,7 +34,7 @@ export const getStaticProps = async () => {
           {
            recipes && 
            recipes.map((obj: RecipesProps) => (
-            <Item {...obj} key={obj.id}/> 
+            <Item {...obj} key={obj.id} apiUrl={'/recipes'}/> 
           ))
           }
         </section>
