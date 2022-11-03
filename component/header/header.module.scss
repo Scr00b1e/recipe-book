@@ -50,6 +50,7 @@
     &__item {
         position: relative;
         margin: 0 20px;
+        padding: 5px 0 5px 0;
 
         font-size: 24px;
         text-transform: capitalize;
@@ -66,7 +67,7 @@
     &__list {
         display: none;
         position: absolute;
-        bottom: -270px;
+        bottom: -255px;
         right: -140px;
         z-index: 100;
 

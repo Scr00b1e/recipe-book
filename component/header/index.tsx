@@ -28,8 +28,8 @@ export const Header: React.FC = () => {
                     </Link>
                   </li>
                   <li className={styles.header__link}>
-                  <Link href={'/breakfast'}>
-                      Breakfast
+                    <Link href={'/lunch'}>
+                      Lunch
                     </Link>
                   </li>
                   <li className={styles.header__link}>
@@ -38,8 +38,8 @@ export const Header: React.FC = () => {
                     </Link>
                   </li>
                   <li className={styles.header__link}>
-                  <Link href={'/breakfast'}>
-                      Breakfast
+                    <Link href={'/lunch'}>
+                      Lunch
                     </Link>
                   </li>
                   <li className={styles.header__link}>
