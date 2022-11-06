@@ -1,6 +1,6 @@
 import { GetServerSideProps } from 'next'
 import React from 'react'
-import BrItem from '../../component/brItem/BrItem'
+import BrItem from '../../component/cardsItem/CardsItem'
 import styles from '../../component/pagesItem/PagesItem.module.scss'
 
 export const getServerSideProps: GetServerSideProps = async ({params}) => {

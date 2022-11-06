@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next'
 import React from 'react'
+import CardsItem from '../../component/cardsItem/CardsItem'
 import styles from '../../component/pagesItem/PagesItem.module.scss'
 
 export const getServerSideProps: GetServerSideProps = async ({params}) => {
@@ -21,7 +22,7 @@ const LunchItem: React.FC<ItemProps> = ({item}) => {
     <div className={styles.item}>
       <div className='container'>
        {
-        item
+        <CardsItem item={item}/>
        }
       </div>
     </div>
