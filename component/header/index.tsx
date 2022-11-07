@@ -64,7 +64,9 @@ export const Header: React.FC = () => {
           </nav>
         </div>
         <div className={styles.header__right}>
-          <img src="../favorite.svg" alt="" />
+          <Link href={'/favorites'}>
+            <img src="../favorite.svg" alt="" />
+          </Link>
           <img src="../search.svg" alt="" />
         </div>
       </div>
