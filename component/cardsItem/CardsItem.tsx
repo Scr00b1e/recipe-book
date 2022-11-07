@@ -1,17 +1,17 @@
 import React from 'react'
 
 type ItemsProps = {
-  item: any
+  title: string
+  time: number
+  id: string
+  img: string
+  type: string
 }
 
-const BrItem: React.FC<ItemsProps> = ({item}) => {
+const BrItem: React.FC<ItemsProps> = ({ title, time, type, img }) => {
   return (
     <div>
-      {
-        item.map((obj) => (
-          <h1>{obj.title}</h1>
-        ))
-      }
+      <h1>{title}</h1>
     </div>
   )
 }
