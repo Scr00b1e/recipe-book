@@ -26,16 +26,11 @@ interface ObjProps {
 }
 
 const LunchItem: React.FC<ItemProps> = ({item}) => {
-  const thing = item.map((obj) => (
-    <CardsItem {...obj} key={obj.id}/>
-  ))
 
   return (
     <div className={styles.item}>
       <div className='container'>
-       {
-        thing
-       }
+       <CardsItem item={item}/>
       </div>
     </div>
   )

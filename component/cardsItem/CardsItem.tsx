@@ -1,6 +1,10 @@
 import React from 'react'
 
-type ItemsProps = {
+type ItemProps = {
+  item: ObjProps[]
+}
+
+interface ObjProps {
   title: string
   time: number
   id: string
@@ -8,10 +12,15 @@ type ItemsProps = {
   type: string
 }
 
-const BrItem: React.FC<ItemsProps> = ({ title, time, type, img }) => {
+const BrItem: React.FC<ItemProps> = ({ item }) => {
   return (
     <div>
-      <h1>{title}</h1>
+      {
+        item &&
+        item.map((obj) => (
+          <h1>{obj.time}</h1>
+        ))
+      }
     </div>
   )
 }
