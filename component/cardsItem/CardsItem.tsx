@@ -15,12 +15,7 @@ interface ObjProps {
 const BrItem: React.FC<ItemProps> = ({ item }) => {
   return (
     <div>
-      {
-        item &&
-        item.map((obj) => (
-          <h1>{obj.time}</h1>
-        ))
-      }
+      {}
     </div>
   )
 }

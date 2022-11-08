@@ -5,7 +5,7 @@ import styles from '../../component/pagesItem/PagesItem.module.scss'
 
 export const getServerSideProps: GetServerSideProps = async ({params}) => {
   
-    const res = await fetch(`${process.env.API_HOST}/brPage/${params.id}.json`)
+    const res = await fetch(`${process.env.API_HOST}/breakfast/${params.id}.json`)
     const data = await res.json()
 
     return {

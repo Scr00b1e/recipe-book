@@ -27,7 +27,7 @@ const Breakfast = ({ item }) => {
     return (
         <PagesItem
             pageTitle={'Breakfast'}
-            pageUrl={'/brPage'} item={item}
+            pageUrl={'/breakfast'} item={item}
         />
       )
 }
