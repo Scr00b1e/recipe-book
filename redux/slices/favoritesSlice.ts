@@ -1,0 +1,21 @@
+import { createSlice } from '@reduxjs/toolkit'
+
+interface InitialState {
+    value: any
+}
+
+const initialState: InitialState = {
+    value: []
+}
+
+export const favoritesSlice = createSlice({
+  name: 'favorites',
+  initialState,
+  reducers: {
+  }
+})
+
+// Action creators are generated for each case reducer function
+export const { } = favoritesSlice.actions
+
+export default favoritesSlice.reducer
