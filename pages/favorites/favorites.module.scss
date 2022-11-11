@@ -3,5 +3,13 @@
 
     &__title {
         color: #000;
+        cursor: pointer;
+    }
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 70vh;
     }
 }
