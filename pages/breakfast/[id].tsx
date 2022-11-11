@@ -3,18 +3,26 @@ import React from 'react'
 import BrItem from '../../component/cardsItem/CardsItem'
 import styles from '../../component/pagesItem/PagesItem.module.scss'
 
-export const getServerSideProps: GetServerSideProps = async ({params}) => {
-  
-    const res = await fetch(`${process.env.API_HOST}/breakfast/${params.id}.json`)
-    const data = await res.json()
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const { id } = context.params
+  const res = await fetch(`${process.env.API_HOST}/brPage/${id}`)
+  const data = await res.json()
 
-    return {
-      props: {item: data}
-    }
+  return {
+    props: {item: data}
+  }
 }
 
 type ItemProps = {
-  item: any
+item: ObjProps[]
+}
+
+interface ObjProps {
+title: string
+time: number
+id: string
+img: string
+type: string
 }
 
 const BreakfastItem: React.FC<ItemProps> = ({item}) => {
