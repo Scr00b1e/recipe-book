@@ -22,11 +22,11 @@ export const favoritesSlice = createSlice({
   name: 'favorites',
   initialState,
   reducers: {
-    addItem(state, action)  {
+    addItem(state, action) {
       const item = action.payload
       const findItem = state.value.find((obj) => obj.id === item.id)
 
-      if(findItem) {
+      if (findItem) {
         findItem.count++
       } else {
         state.value.push({
@@ -40,7 +40,7 @@ export const favoritesSlice = createSlice({
       state.value = state.value.filter((obj) => obj.id !== item)
       const findItem = state.value.find((obj) => obj.id === item)
 
-      if(findItem) {
+      if (findItem) {
         findItem.count--
       }
     },
@@ -50,7 +50,7 @@ export const favoritesSlice = createSlice({
   }
 })
 
-export const selectFav = (state: RootState) => state.favorites
+export const selectFav = (state: RootState) => state.favorites.value
 
 export const { addItem, removeItem, clearItem } = favoritesSlice.actions
 

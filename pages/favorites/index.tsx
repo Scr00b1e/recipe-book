@@ -9,13 +9,16 @@ const Favorites: React.FC = () => {
   return (
     <div className={styles.favorite}>
       <div className='container'>
-        <h1 className={styles.favorite__title}>
-          Clear All
-        </h1>
+        <div className={styles.favorite__words}>
+          <h1 className={styles.favorite__title}>Favorites</h1>
+          <h1 className={styles.favorite__clear}>
+            Clear All
+          </h1>
+        </div>
         <div className={styles.favorite__content}>
           {
             Object.values(items).map((obj: FavProps) => (
-              <FavItem {...obj} key={obj.id}/>
+              <FavItem {...obj} key={obj.id} />
             ))
           }
         </div>
