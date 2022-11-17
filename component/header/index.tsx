@@ -9,46 +9,46 @@ export const Header: React.FC = () => {
         <div className={styles.header__left}>
           <Link href={'/'}>
             <div className={styles.header__name}>
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png" 
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png"
                 alt=""
                 className={styles.header__img} />
-                <h1 className={styles.header__title}>
-                  Recipes
-                </h1>
+              <h1 className={styles.header__title}>
+                Recipes
+              </h1>
             </div>
           </Link>
           <nav className={styles.header__nav}>
-              <div className={styles.header__item}>
-                Recipes
-                <ul className={styles.header__list}>
-                  <li className={styles.header__link}>
-                    <Link href={'/breakfast'}>
-                      Breakfast
-                    </Link>
-                  </li>
-                  <li className={styles.header__link}>
-                    <Link href={'/lunch'}>
-                      Lunch
-                    </Link>
-                  </li>
-                  <li className={styles.header__link}>
+            <div className={styles.header__item}>
+              Recipes
+              <ul className={styles.header__list}>
+                <li className={styles.header__link}>
                   <Link href={'/breakfast'}>
-                      Breakfast
-                    </Link>
-                  </li>
-                  <li className={styles.header__link}>
-                    <Link href={'/lunch'}>
-                      Lunch
-                    </Link>
-                  </li>
-                  <li className={styles.header__link}>
+                    Breakfast
+                  </Link>
+                </li>
+                <li className={styles.header__link}>
+                  <Link href={'/lunch'}>
+                    Lunch
+                  </Link>
+                </li>
+                <li className={styles.header__link}>
                   <Link href={'/breakfast'}>
-                      Breakfast
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+                    Breakfast
+                  </Link>
+                </li>
+                <li className={styles.header__link}>
+                  <Link href={'/lunch'}>
+                    Lunch
+                  </Link>
+                </li>
+                <li className={styles.header__link}>
+                  <Link href={'/breakfast'}>
+                    Breakfast
+                  </Link>
+                </li>
+              </ul>
+            </div>
             <div className={styles.header__item}>
               Quick & Easy
             </div>
@@ -65,7 +65,7 @@ export const Header: React.FC = () => {
         </div>
         <div className={styles.header__right}>
           <Link href={'/favorites'}>
-            <img src="../favorite.svg" alt="" />
+            <img src="../favorite.png" alt="" />
           </Link>
           <img src="../search.svg" alt="" />
         </div>
