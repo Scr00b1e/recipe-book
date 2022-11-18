@@ -22,7 +22,7 @@ const Modal: React.FC<ModalType> = ({ setModalOpen }) => {
                         className={styles.modal__close}
                         onClick={() => setModalOpen(false)} />
                 </div>
-                <h1 className={styles.modal__title}>Are you sure you wanna remove this item ?</h1>
+                <h1 className={styles.modal__title}>Are you sure you wanna delete all items ?</h1>
                 <div className={styles.modal__buttons}>
                     <button onClick={onClickYes}>Yes</button>
                     <button onClick={() => setModalOpen(false)}>Cancel</button>
