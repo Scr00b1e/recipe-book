@@ -1,0 +1,24 @@
+.favorite {
+    padding-top: 150px;
+
+    &__words {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: #000;
+    }
+
+    &__clear {
+        cursor: pointer;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 70vh;
+    }
+}

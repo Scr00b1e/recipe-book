@@ -1,0 +1,48 @@
+.intro {
+    padding-top: 90px;
+
+    width: 100%;
+    height: 950px;
+
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+
+        background: rgba(0, 0, 0, 0.493);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: fill;
+    }
+
+    &__words {
+        position: absolute;
+        top: 45%;
+        left: 40%;
+
+        text-align: center;
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px 50px;
+    }
+    &__title {
+        font-size: 26px;
+    }
+    &__text {
+        margin-bottom: 30px;
+    }
+}
