@@ -1,7 +1,9 @@
+import Link from 'next/link'
 import React from 'react'
 import { useSelector } from 'react-redux'
 import FavItem, { FavProps } from '../../component/favItem/FavItem'
 import Modal from '../../component/modal/Modal'
+import Btn from '../../my_UI/button/Btn'
 import { selectFav } from '../../redux/slices/favoritesSlice'
 import styles from './favorites.module.scss'
 
@@ -10,6 +12,16 @@ const Favorites: React.FC = () => {
   const [modalOpen, setModalOpen] = React.useState(false)
   const onClickClear = () => {
     setModalOpen(!modalOpen)
+  }
+
+  if (items.length === 0) {
+    return (
+      <div className={styles.favorite__empty}>
+        <div className="container">
+          <h1 className={styles.favorite__title}>Here is no favorites yet</h1>
+        </div>
+      </div>
+    )
   }
 
   return (
