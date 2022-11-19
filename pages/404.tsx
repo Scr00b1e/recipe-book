@@ -13,9 +13,9 @@ const Error: React.FC = () => {
     return (
         <div className='error'>
             <h1>404</h1>
-            <p>Sorry we don't have page like that</p>
+            <p>Sorry we do not have page like that</p>
         </div>
-      )
+    )
 }
 
 export default Error
