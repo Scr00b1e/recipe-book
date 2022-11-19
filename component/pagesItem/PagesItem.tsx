@@ -1,7 +1,7 @@
 import React from 'react'
 import { Item, RecipesProps } from '../../component/item'
 import Category from '../category/Category'
-// import styles from './pagesItem.module.scss'
+import styles from './pagesItem.module.scss'
 
 type PageProps = {
     pageTitle: string
@@ -12,11 +12,11 @@ type PageProps = {
 const Lunch: React.FC<PageProps> = ({ item, pageTitle, pageUrl }) => {
 
     return (
-        <div className=''>
+        <div className={styles.item}>
             <div className="container">
-                <h1 className=''>{pageTitle}</h1>
+                <h1 className={styles.item__title}>{pageTitle}</h1>
                 {/* <Category /> */}
-                <div className=''>
+                <div className={styles.item__content}>
                     {
                         item &&
                         item.map((obj: RecipesProps) => (
@@ -25,7 +25,7 @@ const Lunch: React.FC<PageProps> = ({ item, pageTitle, pageUrl }) => {
                     }
                 </div>
             </div>
-        </div >
+        </div>
     )
 }
 
