@@ -3,7 +3,6 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import FavItem, { FavProps } from '../../component/favItem/FavItem'
 import Modal from '../../component/modal/Modal'
-import Btn from '../../my_UI/button/Btn'
 import { selectFav } from '../../redux/slices/favoritesSlice'
 import styles from './favorites.module.scss'
 

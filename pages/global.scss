@@ -74,3 +74,15 @@ a {
 
     cursor: pointer;
 }
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px;
+
+    background-color: transparent;
+    border: 1px #000 solid;
+    border-radius: 15px;
+
+    font-size: 18px;
+}

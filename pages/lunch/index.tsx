@@ -2,23 +2,23 @@ import { GetStaticProps } from 'next'
 import React from 'react'
 import PagesItem from '../../component/pagesItem/PagesItem'
 
-export const  getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
     try {
         const responce = await fetch(`${process.env.API_HOST}/lunch`)
         const data = await responce.json()
 
-        if(!data) {
+        if (!data) {
             return {
                 notFound: true,
             }
         }
 
         return {
-            props: {item: data}
+            props: { item: data }
         }
     } catch {
         return {
-            props: {item: null}
+            props: { item: null }
         }
     }
 }
@@ -26,10 +26,10 @@ export const  getStaticProps: GetStaticProps = async () => {
 const Lunch = ({ item }) => {
 
     return (
-        <PagesItem 
+        <PagesItem
             pageTitle={'Lunch'}
-            pageUrl={'/lunch'} item={item}            />
-      )
+            pageUrl={'/lunch'} item={item} />
+    )
 }
 
 export default Lunch

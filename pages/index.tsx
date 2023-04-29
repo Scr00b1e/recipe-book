@@ -1,5 +1,5 @@
 import Intro from "../component/intro/Intro"
-import {Item, RecipesProps} from "../component/item"
+import { Item, RecipesProps } from "../component/item"
 import { Header } from "../component/header"
 import Link from "next/link"
 
@@ -8,38 +8,38 @@ export const getStaticProps = async () => {
     const responce = await fetch(`${process.env.API_HOST}/recipes`)
     const recipes = await responce.json()
 
-    if(!recipes) {
+    if (!recipes) {
       return {
         notFound: true
       }
     }
 
     return {
-      props: {recipes}
+      props: { recipes }
     }
   } catch {
     alert('something is wrong')
   }
 }
 
-  const Home = ({recipes}) => (
-    <>
-      <Header/>
-      <Intro/>
-      <div className="container">
-        <Link href={'/breakfast'}>
-          <h1 className="heading__title">Go there!</h1>
-        </Link>
-        <section className="heading">
-          {
-           recipes && 
-           recipes.map((obj: RecipesProps) => (
-            <Item {...obj} key={obj.id} apiUrl={'/recipes'}/> 
+const Home = ({ recipes }) => (
+  <>
+    <Header />
+    <Intro />
+    <div className="container">
+      <Link href={'/breakfast'}>
+        <h1 className="heading__title">Go there!</h1>
+      </Link>
+      <section className="heading">
+        {
+          recipes &&
+          recipes.map((obj: RecipesProps) => (
+            <Item {...obj} key={obj.id} apiUrl={'/recipes'} />
           ))
-          }
-        </section>
-      </div>
-    </>
-  )
+        }
+      </section>
+    </div>
+  </>
+)
 
 export default Home
