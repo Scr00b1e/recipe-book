@@ -67,7 +67,6 @@ export const Header: React.FC = () => {
           <Link href={'/favorites'}>
             <img src="../favorite.png" alt="" />
           </Link>
-          <img src="../search.svg" alt="" />
         </div>
       </div>
     </div>
